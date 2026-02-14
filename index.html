@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cameron Wilson | Real Estate Productivity Coach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: #111;
+        }
+        
+        .hero-text .subtitle {
+            font-size: 1.25rem;
+            color: #555;
+            margin-bottom: 32px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: #b40101;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        
+        .btn:hover {
+            background: #8a0000;
+            transform: translateY(-2px);
+        }
+        
+        .hero-image {
+            text-align: center;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        /* Placeholder for headshot */
+        .headshot-placeholder {
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 3/4;
+            background: #ddd;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 1rem;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+        }
+        
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        
+        .about-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about p {
+            font-size: 1.125rem;
+            color: #444;
+            margin-bottom: 16px;
+        }
+        
+        /* What You Get Section */
+        .services {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+        
+        .services h2 {
+            font-size: 2rem;
+            margin-bottom: 48px;
+            text-align: center;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        
+        .service-card {
+            background: #fff;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: #b40101;
+        }
+        
+        .service-card p {
+            color: #555;
+        }
+        
+        /* Results Section */
+        .results {
+            padding: 100px 0;
+        }
+        
+        .results h2 {
+            font-size: 2rem;
+            margin-bottom: 48px;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            color: #b40101;
+            font-weight: 700;
+        }
+        
+        .stat-item p {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 8px;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            background: #1a1a1a;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        
+        .cta p {
+            font-size: 1.125rem;
+            color: #aaa;
+            margin-bottom: 32px;
+        }
+        
+        .cta .btn {
+            background: #fff;
+            color: #b40101;
+        }
+        
+        .cta .btn:hover {
+            background: #f0f0f0;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: #888;
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.25rem;
+            }
+            
+            .hero-image {
+                order: -1;
+            }
+            
+            .services-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Stop Grinding. Start Growing.</h1>
+                    <p class="subtitle">I help real estate agents build productive habits, close more deals, and create a business that actually works for them.</p>
+                    <a href="#book" class="btn">Book a Free Strategy Call</a>
+                </div>
+                <div class="hero-image">
+                    <!-- Replace with actual headshot -->
+                    <div class="headshot-placeholder">Headshot goes here</div>
+                    <!-- <img src="images/cameron-headshot.jpg" alt="Cameron Wilson"> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Your Productivity Coach</h2>
+                <p>I'm Cameron Wilson, Productivity Coach at Keller Williams Westfield. I've helped dozens of agents go from overwhelmed and inconsistent to focused and closing deals.</p>
+                <p>My approach is simple: clear priorities, daily action, and accountability that actually works. No fluff. Just results.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>What You Get</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Weekly 1-on-1 Coaching</h3>
+                    <p>30-minute weekly sessions focused on your specific challenges, goals, and next actions.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Accountability System</h3>
+                    <p>Track your numbers, see your progress, and stay accountable to the activities that drive results.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Proven Frameworks</h3>
+                    <p>Scripts, systems, and strategies that work — no need to reinvent the wheel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Results Section -->
+    <section class="results">
+        <div class="container">
+            <h2>Results That Speak</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Agents Coached</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4x</h3>
+                    <p>Average Production Increase</p>
+                </div>
+                <div class="stat-item">
+                    <h3>90%</h3>
+                    <p>Hit Their Goals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta" id="book">
+        <div class="container">
+            <h2>Ready to Level Up?</h2>
+            <p>Book a free 15-minute call. Let's see if we're a good fit.</p>
+            <!-- Replace with actual Calendly link -->
+            <a href="https://calendly.com/YOURLINK" class="btn">Schedule Your Call</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Cameron Wilson. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
